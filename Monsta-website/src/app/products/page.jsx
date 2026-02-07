@@ -10,7 +10,9 @@ export default async function page() {
   return (
      <div className="max-w-[1140px] mx-auto">
       <h1 className="font-bold text-center mt-4 text-3xl">Products</h1>
+      <Suspense fallback={null}>
        <ProductContainer />
+       </Suspense>
     </div>
   )
 }
