@@ -1,5 +1,5 @@
 import axios from 'axios'
-import React from 'react'
+import React, { Suspense } from 'react'
 import ProductContainer from '../components/ProductComponents/ProductContainer'
 
 
