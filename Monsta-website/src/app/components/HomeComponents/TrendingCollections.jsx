@@ -1,4 +1,6 @@
+import Link from 'next/link'
 import React from 'react'
+
 
 export default function TrendingCollections() {
     return (
@@ -20,12 +22,12 @@ export default function TrendingCollections() {
                         <span className="block text-lg md:text-xl mb-6">
                             We Believe That Good Design is Always in Season
                         </span>
-                        <Link
+                        <a
                             href="/products"
                             className="inline-block bg-white text-black font-semibold px-6 py-3 rounded hover:bg-gray-200 transition"
                         >
                             Shop Now
-                        </Link>
+                        </a>
                     </div>
                 </div>
             </div>
@@ -33,3 +35,4 @@ export default function TrendingCollections() {
 
     )
 }
+
