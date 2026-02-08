@@ -37,7 +37,7 @@ export default function Shopping_cart() {
               </thead>
               <tbody>
 
-                {cart_data.map((items,index) => {
+                {cart_data.map((items, index) => {
                   return (
                     <tr className="border-b border-gray-200" key={index}>
                       <td className="py-4 px-4">
@@ -51,11 +51,11 @@ export default function Shopping_cart() {
                         </button>
                       </td>
                       <td className="py-4 px-4">
-                          <img
-                            src={items.image}
-                            alt={items.title}
-                            className="h-16 w-16 object-cover rounded"
-                          />
+                        <img
+                          src={items.image}
+                          alt={items.title}
+                          className="h-16 w-16 object-cover rounded"
+                        />
                       </td>
                       <td className="py-4 px-4">
 
@@ -102,21 +102,27 @@ export default function Shopping_cart() {
           <div className="coupon_code md:w-1/2 bg-white p-6 rounded shadow">
             <h3 className="text-xl font-semibold mb-4">Coupon</h3>
             <p className="mb-4">Enter your coupon code if you have one.</p>
-            <form autoComplete="off" noValidate className="flex gap-2">
+            <form
+              autoComplete="off"
+              noValidate
+              className="flex flex-col sm:flex-row gap-2 w-full"
+            >
               <input
                 type="text"
                 name="entercode"
                 id="entercode"
                 placeholder="Coupon code"
-                className="flex-grow border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300"
+                className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300"
               />
+
               <button
                 type="submit"
-                className="bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
+                className="w-full sm:w-auto bg-green-600 text-white px-4 py-2 rounded hover:bg-green-700 transition"
               >
                 Apply coupon
               </button>
             </form>
+
           </div>
 
           <div className="coupon_code md:w-1/2 bg-white p-6 rounded shadow">
