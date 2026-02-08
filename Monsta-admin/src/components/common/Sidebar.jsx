@@ -12,7 +12,7 @@ export default function Sidebar() {
     <div>   
    <aside id="logo-sidebar" className="fixed top-0 left-0 w-64 h-screen transition-transform -translate-x-full sm:translate-x-0   " aria-label="Sidebar">
       <div className="h-full px-3 py-4 overflow-y-auto bg-gray-50 dark:bg-gray-800 scrollbar-hide">
-         <Link to="/">
+         <Link to="/dashboard">
             <div className="flex items-center ps-2.5 mb-5 border-b border-slate-400 pb-7"><img src="https://wscubetech.co/Assignments/furniture/storage/app/public/uploads/images/company-profile/logo/cccfbdab-3bec-439f-88b9-5694698cd302-1670132652.png" className="img-fluid" alt="Flowbite Logo"/></div>
          </Link>
          <ul className="space-y-2 font-medium">
