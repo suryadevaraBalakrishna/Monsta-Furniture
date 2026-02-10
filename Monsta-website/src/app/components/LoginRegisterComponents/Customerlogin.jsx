@@ -23,7 +23,7 @@ export default function Customerlogin() {
      event.preventDefault();
      setformSubmit(true);
 
-     axios.post('http://localhost:8000/api/website/user/register',event.target)
+     axios.post(process.env.NEXT_PUBLIC_API_URL+process.env.NEXT_PUBLIC_USER_REGISTER,event.target)
      .then((result)=>{
        if(result.data._status==true){
          toast.success(result.data._message);
@@ -52,7 +52,7 @@ export default function Customerlogin() {
     event.preventDefault();
     setloginStatus(true);
      
-      axios.post('http://localhost:8000/api/website/user/login',event.target)
+      axios.post(process.env.NEXT_PUBLIC_API_URL+process.env.NEXT_PUBLIC_USER_LOGIN,event.target)
      .then((result)=>{
        if(result.data._status==true){
          toast.success(result.data._message);
