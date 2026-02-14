@@ -14,6 +14,8 @@ export default function Customerlogin() {
   const dispatch = useDispatch();
   const router = useRouter();
 
+  const [showPassword, setShowPassword] = useState(false);
+
   const [formSubmit,setformSubmit] = useState(false);
 
   const [loginStatus,setloginStatus] = useState(false);
@@ -102,13 +104,14 @@ export default function Customerlogin() {
                     Password <span className="text-red-500">*</span>
                   </label>
                   <input
-                    type="password"
+                    type={showPassword ? 'text' : 'password'}
                     id="login-password"
                     name="password"
                     placeholder="Password"
-                   
+                    
                     className="w-full border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring focus:ring-blue-300"
                   />
+                  <input type="checkbox"  onClick={()=>setShowPassword(!showPassword)} className="ml-2"/> show password
                 </div>
                 <div className="flex justify-between items-center mb-6">
                   <Link href="/forgot-password" className="text-blue-600 hover:underline text-sm">
