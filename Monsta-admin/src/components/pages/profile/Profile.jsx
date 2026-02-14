@@ -20,7 +20,7 @@ export default function Profile() {
 
 
     useEffect(()=>{
-        axios.post('http://localhost:8000/api/admin/user/view-profile',{},{
+        axios.post('https://monsta-furniture-api.onrender.com/api/admin/user/view-profile',{},{
             headers:{
                 'Authorization': `Bearer ${usertoken}`
             }
@@ -45,7 +45,7 @@ export default function Profile() {
         event.preventDefault();
         setUpdateStatus(true);
 
-         axios.post('http://localhost:8000/api/admin/user/update-profile',event.target,{
+         axios.post('https://monsta-furniture-api.onrender.com/api/admin/user/update-profile',event.target,{
             headers:{
                 'Authorization': `Bearer ${usertoken}`
             }
@@ -71,7 +71,7 @@ export default function Profile() {
          event.preventDefault();
         setUpdateStatus(true);
 
-         axios.post('http://localhost:8000/api/admin/user/change-password',event.target,{
+         axios.post('https://monsta-furniture-api.onrender.com/api/admin/user/change-password',event.target,{
             headers:{
                 'Authorization': `Bearer ${usertoken}`
             }

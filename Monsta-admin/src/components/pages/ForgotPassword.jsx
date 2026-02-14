@@ -11,7 +11,7 @@ export default function ForgotPassword() {
         event.preventDefault();
         setsubmitStatus(true);
 
-        axios.post('http://localhost:8000/api/admin/user/forgot-password', event.target)
+        axios.post('https://monsta-furniture-api.onrender.com/api/admin/user/forgot-password', event.target)
             .then((result) => {
                 if (result.data._status == true) {
                     toast.success(result.data._message);
