@@ -66,7 +66,7 @@ export default function page() {
 
 
 
-     axios.post('http://localhost:8000/api/website/order/order-placed',{
+     axios.post('https://monsta-furniture-api.onrender.com/api/website/order/order-placed',{
         product_info:product_info,
         billing_address:billing_address,
         shipping_address: shipping_address,
@@ -134,7 +134,7 @@ export default function page() {
 
 
   const orderStatusChange=(payment_id, order_id)=>{
-           axios.post('http://localhost:8000/api/website/order/change-status', {
+           axios.post('https://monsta-furniture-api.onrender.com/api/website/order/change-status', {
             payment_id : payment_id,
             order_id : order_id
         }, {
